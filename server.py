@@ -5,7 +5,7 @@ import uuid
 from datetime import datetime
 
 app = Flask(__name__)
-socketio = SocketIO(app, async_mode='asgi')
+socketio = SocketIO(app, async_mode='asyncio')
 
 # Dane aukcji
 auction = {
