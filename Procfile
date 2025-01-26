@@ -1,1 +1,1 @@
-web: gunicorn -k gevent -b 0.0.0.0:$PORT server:app
+web: uvicorn server:app --host 0.0.0.0 --port $PORT
