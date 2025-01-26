@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k eventlet -b 0.0.0.0:$PORT server:app
+web: gunicorn -k gevent -b 0.0.0.0:$PORT server:app
