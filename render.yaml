@@ -3,4 +3,4 @@ services:
     name: flask-app
     env: python
     buildCommand: ./render-build.sh && pip install -r requirements.txt
-    startCommand: gunicorn -k gevent -b 0.0.0.0:$PORT server:app
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
